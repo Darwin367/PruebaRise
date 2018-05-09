@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Pagina de Producto</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<!-- Slick -->
+		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+		<!-- nouislider -->
+		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+    </head>
+	<body ng-app="AppHome">
+		<div ng-controller="HomeController as home">
+			<header>
+				<div id="top-header">
+					<div class="container text-center">
+						<h4 class="head-title">HOT SALE -30% EN SANDALIAS</h4>
+					</div>
+				</div>
+				<div id="top-header-nav">
+					<div class="container text-center">
+						<div class="col-md-12">
+							<div class="section-title">
+								<div class="section-nav">
+									<ul class="section-tab-nav tab-nav">
+										<li class="active"><a data-toggle="tab" href="#">DIRETORIO DE TIENDAS</a></li>
+										<li><a data-toggle="tab" href="#">SERVICIO AL CLIENTE</a></li>
+										<li><a data-toggle="tab" href="#">MI CUENTA</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="header-logo">
+									<a href="#" class="logo">
+										<img class="col-md-6" src="./img/hush.jpg" alt="">
+									</a>
+								</div>
+								<div class="col-md-6 pull-right">
+									<div class="header-search">
+										<form>
+											<input class="input" placeholder="Buscar...">
+											<button class="search-btn"> > </button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-6 pull-right">
+									<h4 class="text-warning">
+										ENVIOS GRATIS PARA PEDIDOS SUPERIORES A $300.000
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<nav id="navigation">
+				<div class="container">
+					<div id="responsive-nav">
+						<ul class="main-nav nav navbar-nav">
+							<li class="active"><a href="#">HOMBRE</a></li>
+							<li><a href="#">MUJER</a></li>
+							<li><a href="#">BLOG</a></li>
+							<li><a href="#">HISTORIA</a></li>
+							<li><a href="#">TIENDAS</a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-3 clearfix pull-right">
+						<div class="header-ctn">
+							<div class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<i class="glyphicon glyphicon-shopping-cart color-car"></i>
+									<span class="color-car">CARRITO</span>
+									<div class="qty">0</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</nav>
+			
+			<!-- Container -->
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<!-- Product main img -->
+						<div class="col-md-5 col-md-push-2">
+							<div id="product-main-img">
+
+								<div class="product-preview">
+									<img src="./img/{{ home.acutalProduct.fotos[0] }}" alt="">
+								</div>
+
+								<div class="product-preview">
+									<img src="./img/{{ home.acutalProduct.foto[1] }}" alt="">
+								</div>
+
+								<div class="product-preview">
+									<img src="./img/{{ home.acutalProduct.fotos[2] }}" alt="">
+								</div>
+
+								<div class="product-preview">
+									<img src="./img/{{ home.acutalProduct.fotos[3] }}" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- /Product main img -->
+
+						<!-- Product thumb imgs -->
+						<div class="col-md-2  col-md-pull-5">
+							<div id="product-imgs">
+								<div class="product-preview">
+									<img src="./img/{{ home.acutalProduct.fotos[0] }}" alt="">
+								</div>
+
+								<div class="product-preview">
+									<img src="./img/{{ home.acutalProduct.foto[1] }}" alt="">
+								</div>
+
+								<div class="product-preview">
+									<img src="./img/{{ home.acutalProduct.fotos[2] }}" alt="">
+								</div>
+
+								<div class="product-preview">
+									<img src="./img/{{ home.acutalProduct.fotos[3] }}" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- /Product thumb imgs -->
+
+						<!-- Product details -->
+						<div class="col-md-5">
+							<div class="product-details">
+								<h2 class="product-name">{{ home.acutalProduct.nombre }}</h2>
+								<div>
+									<h3 class="product-price">{{ home.acutalProduct.precio | currency: "$" : 0 }}</h3>
+								</div>
+								<p>Cod. Producto zap - 3450988</p>
+
+								<div class="product-options">
+									<label>
+										REFERENCIA: {{ home.acutalProduct.referencia }}
+									</label>
+								</div>
+
+								<div class="add-to-cart">
+									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> AGREGAR AL CARITO</button>
+								</div>
+
+								<ul class="product-btns">
+									<li><a href="#"><i class="fa fa-heart-o"></i> AGREGAR A FAVORITOS</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<!-- /Product details -->
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<h3>INFORMACION DEL PRODUCTO</h3>
+						<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipiscing elit, dui aliquam rutrum praesent orci habitasse urna, fames curabitur commodo malesuada tortor pretium. Odio inceptos mollis malesuada non id metus platea nisi vitae praesent purus maecenas lectus accumsan nec aliquet, tempus facilisi montes tempor hendrerit interdum ligula nisl dignissim blandit magnis potenti sapien fames. Et eros ultrices magnis suspendisse proin pharetra egestas ultricies eleifend ac, gravida vulputate sollicitudin ridiculus in pulvinar condimentum molestie sapien, tincidunt nunc vehicula imperdiet bibendum faucibus curae scelerisque sed.</p>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<h3>TECNNOLOGIAS</h3>
+						<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipiscing elit, dui aliquam rutrum praesent orci habitasse urna, fames curabitur commodo malesuada tortor pretium. Odio inceptos mollis malesuada non id metus platea nisi vitae praesent purus maecenas lectus accumsan nec aliquet, tempus facilisi montes tempor hendrerit interdum ligula nisl dignissim blandit magnis potenti sapien fames. Et eros ultrices magnis suspendisse proin pharetra egestas ultricies eleifend ac, gravida vulputate sollicitudin ridiculus in pulvinar condimentum molestie sapien, tincidunt nunc vehicula imperdiet bibendum faucibus curae scelerisque sed.</p>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12">
+							<div class="section-title">
+								<h3 class="title">COMPLETA TU LOOK</h3>
+							</div>
+						</div>
+
+						<!-- Products tab & slick -->
+						<div class="col-md-12">
+							<div class="row">
+								<div class="product col-md-3" ng-repeat="compelement in home.complementLook">
+									<div class="product-img">
+										<img src="./img/{{ compelement.fotos[0] }}" style="height:200px;" alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<h3 class="product-name"><a href="#">{{ compelement.nombre }}</a></h3>
+										<h4 class="product-price">{{ compelement.precio | currency : "$" : 0 }}</h4>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">VER PRODUCTO</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Products tab & slick -->
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12">
+							<div class="section-title">
+								<h3 class="title">PRODCTOS RECOMENDADOS</h3>
+							</div>
+						</div>
+
+						<!-- Products tab & slick -->
+						<div class="col-md-12">
+							<div class="row">
+								<div class="product col-md-3" ng-repeat="compelement in home.recommendedProducts">
+									<div class="product-img">
+										<img src="./img/{{ compelement.fotos[0] }}" style="height: 200px;"  alt="">
+										<div class="product-label">
+											<span class="sale">-30%</span>
+											<span class="new">NEW</span>
+										</div>
+									</div>
+									<div class="product-body">
+										<h3 class="product-name"><a href="#">{{ compelement.nombre }}</a></h3>
+										<h4 class="product-price">{{ compelement.precio | currency : "$" : 0 }}</h4>
+										<div class="product-rating">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="product-btns">
+											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">VER PRODUCTO</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /Products tab & slick -->
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+
+			<div id="newsletter" class="section down-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="newsletter ">
+								<p>@<strong>HUSHPUPPIESCO</strong></p>
+								<ul class="newsletter-follow">
+									<li>
+										<a href="#"><i class="fa fa-facebook"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-instagram"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Container -->
+
+			<footer id="footer">
+				<div class="section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 col-xs-6">
+								<div class="footer">
+									<h3 class="footer-title">SERVICIO AL CLIENTE</h3>
+									<ul class="footer-links">
+										<li><a href="#">CONTACTENOS</a></li>
+										<li><a href="#">CAMBIO Y DEVOLUCIONES</a></li>
+										<li><a href="#">POLITICAS DE LA TIENDA</a></li>
+										<li><a href="#">POLITICAS DATOS</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-3 col-xs-6">
+								<div class="footer">
+									<h3 class="footer-title">MI CUENTA</h3>
+									<ul class="footer-links">
+										<li><a href="#">MIS PEDIDOS</a></li>
+										<li><a href="#">MIS DEVOLUCIONES</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="clearfix visible-xs"></div>
+
+							<div class="col-md-3 col-xs-6">
+								<div class="footer">
+									<h3 class="footer-title">RECURSOS</h3>
+									<ul class="footer-links">
+										<li><a href="#">TIENDAS</a></li>
+										<li><a href="#">DEVOLUCIONES</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-3 col-xs-6">
+								<div class="footer">
+									<h3 class="footer-title">NEWSLATTER</h3>
+									<p>Registrate par ser el primero en recibir nuestras noticias</p>
+									<input type="product-label" placeholder="EMAIL...">
+									<button>></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div id="bottom-footer" class="section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<ul class="footer-payments">
+									<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+									<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+									<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+									<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+									<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+									<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- /FOOTER -->
+		</div>
+	</body>
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/jquery.zoom.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript" 
+			src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script type="text/javascript"
+			src="js/angular.app/app.controller.js"></script>
+	<script type="text/javascript"
+			src="js/angular.app/service/factorie.js"></script>
+</html>
